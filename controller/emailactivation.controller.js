@@ -19,7 +19,7 @@ app.controller('EmailActivationController', EmailActivationController);
             var id = $location.search().id;        
             UserService.VerifyEmail(id)
             .then(function (response) {
-                console.log(response);
+                //console.log($location);
                 if( !response.success ){
                     FlashService.Error(response.message);
                     vm.dataLoading = false;

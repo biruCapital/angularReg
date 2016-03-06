@@ -50,6 +50,8 @@ app.controller('RegisterController', RegisterController);
 
         function register() {
             vm.dataLoading = true;
+            console.log($location);
+            var baseUrl = $location.$$absUrl.split('#')[0];
             var json = { "json": {
                             "request": {
                               "servicetype":"21",
@@ -59,7 +61,7 @@ app.controller('RegisterController', RegisterController);
                                 "password": vm.user.password,
                                 "retypepassword":vm.user.confirmPassword
                               },
-                              "url":"http://127.0.0.1:52438/freelance/myjobs/VerifyEmail"
+                              "url":baseUrl + "VerifyEmail"
                             }
                           }
                         };
