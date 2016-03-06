@@ -61,7 +61,7 @@ app.controller('RegisterController', RegisterController);
                                 "password": vm.user.password,
                                 "retypepassword":vm.user.confirmPassword
                               },
-                              "url":baseUrl + "VerifyEmail"
+                              "url":encodeURIComponent( baseUrl + "#VerifyEmail")
                             }
                           }
                         };
